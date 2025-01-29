@@ -1,16 +1,60 @@
-## Hi there 👋
+# 👨💻 Yago Kurashiki
 
-<!--
-**Yajoojj/Yajoojj** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
+**`Estudante de Análise e Desenvolvimento de Sistemas (Fatec) | Desenvolvedor Full-Stack Jr`**  
 
-Here are some ideas to get you started:
+ Estudante de **Análise e Desenvolvimento de Sistemas** na Fatec, em busca de aprimorar habilidades full-stack através de projetos práticos. Foco atual em integrar tecnologias backend e frontend para soluções web funcionais.
 
-- 🔭 I’m currently working on ...
-- 🌱 I’m currently learning ...
-- 👯 I’m looking to collaborate on ...
-- 🤔 I’m looking for help with ...
-- 💬 Ask me about ...
-- 📫 How to reach me: ...
-- 😄 Pronouns: ...
-- ⚡ Fun fact: ...
--->
+🌍 **Idiomas:**  
+<img align="left" alt="Português" width="26px" style="padding-right:5px" src="https://flagcdn.com/w20/br.png"/> **Nativo**  
+<img align="left" alt="Inglês" width="26px" style="padding-right:5px" src="https://flagcdn.com/w20/gb.png"/> **Fluente**  
+<img align="left" alt="Espanhol" width="26px" style="padding-right:5px" src="https://flagcdn.com/w20/es.png"/> **Avançado**  
+<img align="left" alt="Russo" width="26px" style="padding-right:5px" src="https://flagcdn.com/w20/ru.png"/> **Iniciante**  
+<br/>
+
+🔭 **Atualmente:**  
+- Atuando na Área de TI na Cananeia Iriko e Produtos Orientais  
+- Desenvolvendo habilidades em Java Spring Boot e React  
+- Explorando integrações API REST e bancos de dados relacionais  
+
+---
+
+### 🛠️ Stack Técnica
+
+#### **Backend**
+<img align="left" alt="Java" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"/>
+<img align="left" alt="Python" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>
+<img align="left" alt="Node.js" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/>
+<img align="left" alt="MySQL" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/>
+<br/><br/>
+
+#### **Frontend**
+<img align="left" alt="React" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/>
+<img align="left" alt="TypeScript" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"/>
+<img align="left" alt="Angular" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg"/>
+<br/><br/>
+
+#### **Ferramentas**
+<img align="left" alt="Git" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>
+<img align="left" alt="AWS" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"/>
+
+---
+
+### 📌 Projeto em Destaque
+
+**[Sistema de Classificação da Dermatite Canina por IA](https://yajoojj.github.io/pi1_equipe36_/)**  
+- Projeto acadêmico utilizando visão computacional  
+- Interface web para análise de imagens veterinárias  
+- Stack: Figma + HTML/CSS básico  
+
+---
+
+### 📈 Estatísticas do GitHub
+
+![Yajooj's GitHub stats](https://github-readme-stats.vercel.app/api?username=Yajooj&show_icons=true&theme=dark&hide_border=true&count_private=true)
+
+---
+
+### 🤝 **Contato**
+
+[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yago-kurashiki-rios-bb772323b/)
+[![E-Mail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:yago.rios@fatec.sp.gov.br)
