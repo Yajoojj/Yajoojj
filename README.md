@@ -58,6 +58,14 @@
 
 ---
 
+### 📌 Portifólios
+
+**[Sistema de Conteudos Multiplataformas](https://yajoojj.github.io/Central-Multiplataforma/)**  
+- Projeto independente
+- Stack: HTML, CSS, JavaScript
+
+---
+
 ### 📈 Estatísticas
 
 ![Yajooj's GitHub stats](https://github-readme-stats.vercel.app/api?username=Yajoojj&show_icons=true&theme=dark&hide_border=true&count_private=true)
