@@ -53,7 +53,7 @@
 
 **[Sistema de Classificação da Dermatite Canina por IA](https://yajoojj.github.io/Rubik-Team/)**  
 - Projeto acadêmico utilizando visão computacional  
-- Interface web para análise de imagens veterinárias  
+- Interface web da equipe
 - Stack: Figma + HTML/CSS básico  
 
 ---
