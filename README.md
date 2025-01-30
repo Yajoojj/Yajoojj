@@ -55,7 +55,7 @@
 
 ---
 
-### 📈 Estatísticas do GitHub
+### 📈 Estatísticas
 
 ![Yajooj's GitHub stats](https://github-readme-stats.vercel.app/api?username=Yajoojj&show_icons=true&theme=dark&hide_border=true&count_private=true)
 
