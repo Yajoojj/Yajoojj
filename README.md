@@ -58,7 +58,7 @@
 
 ---
 
-### 📌 Portifólios
+### 📌 Portfólios
 
 **[Sistema de Conteudos Multiplataformas](https://yajoojj.github.io/Central-Multiplataforma/)**  
 - Projeto independente
