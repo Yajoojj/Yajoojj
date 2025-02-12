@@ -1,6 +1,6 @@
 # 👨💻 Yago Kurashiki
 
-**`Estudante de Análise e Desenvolvimento de Sistemas (Fatec) | Desenvolvedor Full-Stack Jr`**  
+**`Estudante de Desenvolvimento de Sistemas (Fatec) | Desenvolvedor Full-Stack Jr`**  
 
  Estudante de **Desenvolvimento de Sistemas** na Fatec, em busca de aprimorar habilidades full-stack através de projetos práticos. Foco atual em integrar tecnologias backend e frontend para soluções web funcionais.
 
