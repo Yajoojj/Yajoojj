@@ -5,6 +5,7 @@
  Estudante de **Desenvolvimento de Sistemas** na Fatec, em busca de aprimorar habilidades full-stack através de projetos práticos. Foco atual em integrar tecnologias backend e frontend para soluções web funcionais.
 
 🌍 **Idiomas:**  
+
 <img align="left" alt="Português" width="26px" style="padding-right:5px" src="https://flagcdn.com/w20/br.png"/> **Nativo**  
 <img align="left" alt="Inglês" width="26px" style="padding-right:5px" src="https://flagcdn.com/w20/gb.png"/> **Fluente**  
 <img align="left" alt="Espanhol" width="26px" style="padding-right:5px" src="https://flagcdn.com/w20/es.png"/> **Avançado**  
@@ -12,6 +13,7 @@
 <br/>
 
 🔭 **Atualmente:**  
+
 - Atuando na Área de TI na Cananeia Iriko e Produtos Orientais  
 - Desenvolvendo habilidades em Java Spring Boot e React  
 - Explorando integrações API REST e bancos de dados relacionais  
