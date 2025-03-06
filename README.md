@@ -73,7 +73,7 @@
 ### 📈 Estatísticas
 
 ![Yajooj's GitHub stats](https://github-readme-stats.vercel.app/api?username=Yajoojj&show_icons=true&theme=dark&hide_border=true&count_private=true)
-[![s]()
+[![s](https://github-readme-stats.vercel.app/api/top-langs/?username=Yajoojj&show_icons=true&theme=dark&hide_border=true&count_private=true)](https://github.com/Yajoojj/github-readme-stats)
 
 ---
 
