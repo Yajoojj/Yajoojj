@@ -55,8 +55,8 @@
 
 ### 📌 Projeto em Destaque
 
-**[Sistema de Classificação da Dermatite Canina por IA](https://yajoojj.github.io/Rubik-Team/)**  
-- Projeto acadêmico utilizando visão computacional  
+**[Equipe Rubik](https://yajoojj.github.io/Rubik-Team/)**  
+- Projeto acadêmico focado em Inteligencia Artificial 
 - Interface web da equipe
 - Stack: Figma + HTML/CSS básico  
 
