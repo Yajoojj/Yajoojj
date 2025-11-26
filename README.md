@@ -2,7 +2,7 @@
 
 **`Estudante de Desenvolvimento de Sistemas (Fatec) | Desenvolvedor Full-Stack Jr`**
 
-Estudante de **Desenvolvimento de Sistemas** na Fatec e apaixonado por tecnologia.  
+Estudante de **Desenvolvimento de Sistemas** na Fatec e entusiasta pela tecnologia.  
 Atualmente focado em me desenvolver como **full-stack**, integrando backend e frontend para criar soluções web funcionais, limpas e escaláveis.
 
 ---
