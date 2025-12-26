@@ -96,3 +96,5 @@ Atualmente focado em me desenvolver como **full-stack**, integrando backend e fr
 [![E-Mail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:yago.rios@fatec.sp.gov.br)
 
 💬 Se quiser trocar ideia sobre projetos, colaboração ou tecnologia em geral, é só chamar!
+
+[![My Awesome Stats](https://awesome-github-stats.azurewebsites.net/user-stats/Yajoojj?cardType=level&theme=github-dark&fontFamily=&preferLogin=false)](https://git.io/awesome-stats-card)
