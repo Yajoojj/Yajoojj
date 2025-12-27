@@ -1,4 +1,7 @@
-# 👨💻 Yago Kurashiki
+<div align="center">
+  <img src="./header.svg" width="100%" />
+</div>
+
 
 **`Estudante de Desenvolvimento de Sistemas (Fatec) | Desenvolvedor Full-Stack Jr`**
 
