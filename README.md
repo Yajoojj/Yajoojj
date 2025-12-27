@@ -68,19 +68,7 @@ Sou um desenvolvedor apaixonado por criar soluções limpas e escaláveis. Meu f
 
 <div align="center">
 
-### 🔴 <span style="color:red">System_Stats</span>
+<div align="center">
 
-<!-- GitHub Stats Card -->
-<img align="center" src="https://github-readme-stats.vercel.app/api?username=Yajoojj&show_icons=true&theme=dark&bg_color=0D0D0D&title_color=FF0000&icon_color=FF0000&text_color=FF0000&hide_border=true" />
-
-<br>
-
-<!-- Top Languages Card -->
-<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yajoojj&layout=compact&theme=dark&bg_color=0D0D0D&title_color=FF0000&text_color=FF0000&hide_border=true&langs_count=6" />
-
-<br>
-
-<!-- Contributions Snake -->
-<img align="center" src="https://github.com/Yajoojj/Yajoojj/blob/output/github-contribution-grid-snake.svg" alt="GitHub Contributions Snake" />
 
 </div>
