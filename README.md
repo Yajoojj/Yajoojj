@@ -1,103 +1,86 @@
 <div align="center">
-  <img src="./header.svg" width="100%" />
+
+<!-- HEADER ANIMADO -->
+<img src="./header.svg" width="100%" />
+
+<a href="https://www.linkedin.com/in/yago-kurashiki-rios-bb772323b/">
+  <img src="https://img.shields.io/badge/LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=FF0000" alt="LinkedIn Badge"/>
+</a>
+<a href="mailto:yago.rios@fatec.sp.gov.br">
+  <img src="https://img.shields.io/badge/Gmail-000000?style=for-the-badge&logo=gmail&logoColor=FF0000" alt="Gmail Badge"/>
+</a>
+<a href="https://github.com/Yajoojj">
+  <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=FF0000" alt="GitHub Badge"/>
+</a>
+
+<br><br>
+
+<img src="https://komarev.com/ghpvc/?username=Yajoojj&color=dc2626&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
+
 </div>
 
+---
 
-**`Estudante de Desenvolvimento de Sistemas (Fatec) | Desenvolvedor Full-Stack Jr`**
+### 🔴 <span style="color:red">Bio_Data</span>
 
-Estudante de **Desenvolvimento de Sistemas** na Fatec e entusiasta pela tecnologia.  
-Atualmente focado em me desenvolver como **full-stack**, integrando backend e frontend para criar soluções web funcionais, limpas e escaláveis.
+> **`User:`** Yago Kurashiki  
+> **`Class:`** Desenvolvedor Full-Stack Jr  
+> **`Occupation:`** Cananeia Iriko e Produtos Orientais  
+> **`Education:`** Análise e Desenvolvimento de Sistemas @ **Fatec**
+
+Sou um desenvolvedor apaixonado por criar soluções limpas e escaláveis. Meu foco atual é dominar a integração entre interfaces modernas e backends robustos.
 
 ---
 
-## 🧭 Sobre mim
+### 🔴 <span style="color:red">Tech_Arsenal</span>
 
-- 🎓 Estudante de Desenvolvimento de Sistemas na **Fatec**
-- 💼 Atuando na área de TI na **Cananeia Iriko e Produtos Orientais**
-- 🔗 Interessado em **APIs REST**, **integrações**, **bancos relacionais** e **boas práticas de código**
-- 💡 Gosto de aprender na prática, construindo projetos que resolvem problemas reais
+<div align="center">
 
----
+| **Backend & Core** | **Frontend & UI** | **Tools & Cloud** |
+|:---:|:---:|:---:|
+| <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"> | <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> | <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"> |
 
-## 🌍 Idiomas
-
-<img align="left" alt="Português" width="22px" style="padding-right:6px" src="https://flagcdn.com/w20/br.png"/> **Português:** Nativo  
-<img align="left" alt="Inglês" width="22px" style="padding-right:6px" src="https://flagcdn.com/w20/gb.png"/> **Inglês:** Fluente  
-<img align="left" alt="Espanhol" width="22px" style="padding-right:6px" src="https://flagcdn.com/w20/es.png"/> **Espanhol:** Avançado  
-<img align="left" alt="Russo" width="22px" style="padding-right:6px" src="https://flagcdn.com/w20/ru.png"/> **Russo:** Iniciante  
-
-<br/>
+</div>
 
 ---
 
-## 🛠️ Stack Técnica
+### 🔴 <span style="color:red">Projects</span> 
 
-### 🔙 Backend
-
-<img align="left" alt="Java" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/java/java-original.svg" />
-<img align="left" alt="Spring Boot" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original.svg" />
-<img align="left" alt="Node.js" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"/>
-<img align="left" alt="JavaScript" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-<img align="left" alt="Python" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"/>
-<img align="left" alt="Csharp" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/csharp/csharp-original.svg"/>
-<img align="left" alt="C" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/c/c-original.svg" />
-<img align="left" alt="Php" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/php/php-original.svg" />
-<img align="left" alt="MySQL" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"/>
-
-<br/><br/>
-
-### 🎨 Frontend
-
-<img align="left" alt="React" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"/>
-<img align="left" alt="Angular" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/angularjs/angularjs-plain.svg"/>
-<img align="left" alt="TypeScript" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-plain.svg"/>
-<img align="left" alt="JavaScript" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
-<img align="left" alt="HTML5" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/html5/html5-original.svg" />
-<img align="left" alt="CSS3" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/css3/css3-original.svg" />
-<img align="left" alt="Android-Studio" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/androidstudio/androidstudio-original.svg" />
-
-<br/><br/>
-
-### ⚙️ Ferramentas & Design
-
-<img align="left" alt="Git" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"/>
-<img align="left" alt="AWS" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"/>
-<img align="left" alt="Figma" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/figma/figma-original.svg" />
-<img align="left" alt="Photoshop" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/photoshop/photoshop-original.svg" />
-<img align="left" alt="Canva" width="30px" style="padding-right:10px;" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/canva/canva-original.svg" />
-
-<br/><br/>
+| Projeto | Stack | Descrição |
+| :--- | :---: | :--- |
+| **[🍃 Eco-Commit](https://github.com/Yajoojj/Eco-Commit/tree/master)** | `Python` `CLI` `Green IT` | **Destaque:** Ferramenta de linha de comando que monitora o consumo de energia de scripts e calcula a pegada de carbono. |
+| **[🧩 Equipe Rubik](https://yajoojj.github.io/Rubik-Team/)** | `HTML` `CSS` `Figma` | Portal institucional desenvolvido para a equipe de Robótica e IA da faculdade. |
+| **[📺 Central Multiplataforma](https://yajoojj.github.io/Central-Multiplataforma/)** | `Js` `Frontend` | Hub centralizador de mídias para organizar conteúdos distribuídos em diversas plataformas. |
 
 ---
 
-## 📚 Atualmente estudando
+### 🔴 <span style="color:red">Current_Studies</span>
 
-- 🧩 **Java + Spring Boot** para APIs REST e aplicações web
-- ⚛️ **React** para SPAs e componentes reutilizáveis
-- 🗄️ **Modelagem de banco de dados** com MySQL
-- 🌐 Boas práticas de **arquitetura web** e **integração backend/frontend**
-
----
-
-## 📌 Projetos em Destaque
-
-### 🔹 [Equipe Rubik](https://yajoojj.github.io/Rubik-Team/)
-- Projeto acadêmico com foco em **Inteligência Artificial**
-- Interface web da equipe
-- **Stack:** Figma · HTML · CSS
-
-### 🔹 [Sistema de Conteúdos Multiplataformas](https://yajoojj.github.io/Central-Multiplataforma/)
-- Projeto independente para centralizar conteúdos em diferentes plataformas
-- **Stack:** HTML · CSS · JavaScript
+- 🤖 **I.A** Para API's e aprendizagem profunda
+- 🧩 **Java + Spring Boot** para APIs REST e aplicações web  
+- ⚛️ **React** para SPAs e componentes reutilizáveis  
+- 🗄️ **Modelagem de banco de dados** com MySQL  
+- 🌐 Boas práticas de **arquitetura web** e **integração backend/frontend**  
 
 ---
 
+<div align="center">
 
-## 🤝 Contato
+<div align="center">
 
-[![LinkedIn](https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/yago-kurashiki-rios-bb772323b/)
-[![E-Mail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:yago.rios@fatec.sp.gov.br)
+### 🔴 <span style="color:red">System_Stats</span>
 
-💬 Se quiser trocar ideia sobre projetos, colaboração ou tecnologia em geral, é só chamar!
+<!-- GitHub Stats Card -->
+<img align="center" src="https://github-readme-stats.vercel.app/api?username=Yajoojj&show_icons=true&theme=dark&bg_color=0D0D0D&title_color=FF0000&icon_color=FF0000&text_color=FF0000&hide_border=true" />
 
-[![My Awesome Stats](https://awesome-github-stats.azurewebsites.net/user-stats/Yajoojj?cardType=level&theme=github-dark&fontFamily=&preferLogin=false)](https://git.io/awesome-stats-card)
+<br>
+
+<!-- Top Languages Card -->
+<img align="center" src="https://github-readme-stats.vercel.app/api/top-langs/?username=Yajoojj&layout=compact&theme=dark&bg_color=0D0D0D&title_color=FF0000&text_color=FF0000&hide_border=true&langs_count=6" />
+
+<br>
+
+<!-- Contributions Snake -->
+<img align="center" src="https://github.com/Yajoojj/Yajoojj/blob/output/github-contribution-grid-snake.svg" alt="GitHub Contributions Snake" />
+
+</div>
