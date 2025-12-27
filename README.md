@@ -63,12 +63,15 @@ Sou um desenvolvedor apaixonado por criar soluções limpas e escaláveis. Meu f
 - 🌐 Boas práticas de **arquitetura web** e **integração backend/frontend**  
 
 ---
-
 <div align="center">
 
-<div align="center">
+### 🔴 <span style="color:red">System_Stats</span>
 
 <div align="center">
+  <a href="https://github.com/brunobritodev/awesome-github-stats">
+    <img src="https://awesome-github-stats.azurewebsites.net/user-stats/Yajoojj?cardType=level-alternate&background=000000&title=ff0000&icon=ff0000&text=ffffff&ring=ff0000&border=000000" alt="Level Stats" />
+  </a>
+</div>
 
 
 </div>
