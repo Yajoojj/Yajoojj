@@ -50,7 +50,7 @@ Sou um desenvolvedor apaixonado por criar soluções limpas e escaláveis. Meu f
 | :--- | :---: | :--- |
 | **[🤖 Axios Cassava IA](https://github.com/Yajoojj/Axios_Cassava_IA)** | `Python` `Deep Learning` `TensorFlow` | **Novo:** Modelo de Inteligência Artificial treinado para classificação e detecção de doenças em folhas de mandioca (Cassava). |
 | **[🍃 Eco-Commit](https://github.com/Yajoojj/Eco-Commit/tree/master)** | `Python` `CLI` `Green IT` | **Destaque:** Ferramenta de linha de comando que monitora o consumo de energia de scripts e calcula a pegada de carbono. |
-| **[📺 Central Multiplataforma](https://yajoojj.github.io/Central-Multiplataforma/)** | `Js` `Frontend` | Simlles projeto com foco em  diversos programas, como jogo da memória, calculadora científica e etc. |
+| **[📺 Central Multiplataforma](https://yajoojj.github.io/Central-Multiplataforma/)** | `Js` `Frontend` | Simples projeto com foco em  diversos programas, como jogo da memória, calculadora científica e etc. |
 
 ---
 ### 🔴 <span style="color:red">Current_Studies</span>
