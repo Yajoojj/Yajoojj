@@ -24,8 +24,7 @@
 ### 🔴 <span style="color:red">Bio_Data</span>
 
 > **`User:`** Yago Kurashiki  
-> **`Class:`** Desenvolvedor Full-Stack Jr  
-> **`Occupation:`** Cananeia Iriko e Produtos Orientais  
+> **`Class:`** Desenvolvedor Back-End Jr  
 > **`Education:`** Análise e Desenvolvimento de Sistemas @ **Fatec**
 
 Sou um desenvolvedor apaixonado por criar soluções limpas e escaláveis. Meu foco atual é dominar a integração entre interfaces modernas e backends robustos.
