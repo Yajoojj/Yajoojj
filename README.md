@@ -6,13 +6,13 @@
 
 </div>
 
-Estudo Desenvolvimento de Software Multiplataforma na **FATEC Registro** e construo produtos de ponta a ponta: treino o modelo, escrevo a API e entrego a interface. Hoje meu foco é levar IA a quem planta no Vale do Ribeira, usando o celular que a pessoa já tem.
+Estudo Desenvolvimento de Software Multiplataforma na **FATEC Registro** e construo produtos de ponta a ponta: treino o modelo, escrevo a API e entrego a interface. Hoje meu foco é estudar e melhorar minhas skills como DEV.
 
 <br>
 
 <a href="https://greenleaf-mobile.vercel.app/inicio"><img src="assets/greenleaf.svg" width="100%" alt="GreenLeaf. Fluxo: foto, preparo no celular, POST /predict, EfficientNet-B0 e HSV, regras e diagnóstico. Acurácia de 87,2%, AUC de 0,93, especificidade de 97,8% e 215 ms por foto em CPU."></a>
 
-A bacteriose pode reduzir em até 70% o peso das raízes da mandioca, e o diagnóstico ainda depende do olho de quem planta. O **GreenLeaf** analisa a foto de uma folha e responde em linguagem simples, com a área suspeita destacada na própria imagem. Os requisitos saíram de uma entrevista com um produtor de Registro. Projeto Integrador da FATEC, feito em dupla com Carlos Eduardo Takeshita.
+A bacteriose pode reduzir em até 70% o peso das raízes da mandioca, e o diagnóstico ainda depende do olho de quem planta. O **GreenLeaf** analisa a foto de uma folha e responde em linguagem simples, com a área suspeita destacada na própria imagem. Os requisitos saíram de uma entrevista com um produtor de Registro. Projeto Integrador da FATEC.
 
 <a href="https://greenleaf-lp.vercel.app"><img src="assets/greenleaf-telas.jpg" width="100%" alt="Landing page do GreenLeaf com a folha em 3D e duas telas do app: diagnóstico grave e área destacada em vermelho sobre a folha."></a>
 
@@ -22,21 +22,17 @@ A bacteriose pode reduzir em até 70% o peso das raízes da mandioca, e o diagn�
 
 </div>
 
-> Métricas medidas em 2.140 fotos nunca vistas pelo modelo. A revocação da bacteriose está em 64,2% e a meta do projeto é 90%. O modelo ainda não foi testado com fotos do Vale do Ribeira, e o resultado não substitui um agrônomo.
-
 <br>
 
 <a href="https://k9-assessoria.netlify.app/"><img src="assets/k9.jpg" width="100%" alt="Landing page da K9 Assessoria: Influência se faz com comunidade. Resultado se faz com estratégia."></a>
 
-**K9 Assessoria.** Site da agência de marketing de influência, em React, TypeScript e Vite, com português e espanhol no mesmo build. A interface foi verificada com Playwright de 320 a 1440 px, incluindo navegação por teclado. Para a mesma agência, desenvolvo também o K9 Casting, sistema interno em repositório privado.
+**K9 Assessoria.** Site da agência de marketing de influência, em React, TypeScript e Vite, com português e espanhol no mesmo build. Para a mesma agência, desenvolvo também o K9 Casting, sistema interno de CRM automatizado com IA.
 
 <div align="center">
 
 <a href="https://k9-assessoria.netlify.app/"><img src="assets/btn-k9.svg" height="46" alt="Ver o site da K9 Assessoria"></a>
 
 </div>
-
-<br>
 
 <img src="assets/stack.svg" width="100%" alt="Stack. IA: PyTorch, ONNX Runtime, OpenCV. Back-end: Python, FastAPI, Flask, Spring Boot, Node.js. Front-end: TypeScript, React, Vite, Three.js, Kotlin. Dados e infra: PostgreSQL, Supabase, Docker, Vercel, Render.">
 
