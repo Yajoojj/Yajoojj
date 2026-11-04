@@ -1,72 +1,58 @@
 <div align="center">
 
-<!-- HEADER ANIMADO -->
-<img src="./header.svg" width="100%" />
+<img src="assets/hero.svg" width="100%" alt="Yago Kurashiki, desenvolvedor full-stack. Da rede neural à tela do celular.">
 
-<a href="https://www.linkedin.com/in/yago-kurashiki-rios-bb772323b/">
-  <img src="https://img.shields.io/badge/LinkedIn-000000?style=for-the-badge&logo=linkedin&logoColor=FF0000" alt="LinkedIn Badge"/>
-</a>
-<a href="mailto:yago.rios@fatec.sp.gov.br">
-  <img src="https://img.shields.io/badge/Gmail-000000?style=for-the-badge&logo=gmail&logoColor=FF0000" alt="Gmail Badge"/>
-</a>
-<a href="https://github.com/Yajoojj">
-  <img src="https://img.shields.io/badge/GitHub-000000?style=for-the-badge&logo=github&logoColor=FF0000" alt="GitHub Badge"/>
-</a>
-
-<br><br>
-
-<img src="https://komarev.com/ghpvc/?username=Yajoojj&color=dc2626&style=flat-square&label=PROFILE+VIEWS" alt="Profile Views" />
+<a href="https://www.linkedin.com/in/yagokurashiki/"><img src="assets/btn-linkedin.svg" height="46" alt="LinkedIn"></a> <a href="mailto:yago.rios@aluno.cps.sp.gov.br"><img src="assets/btn-email.svg" height="46" alt="E-mail"></a>
 
 </div>
 
----
+Estudo Desenvolvimento de Software Multiplataforma na **FATEC Registro** e construo produtos de ponta a ponta: treino o modelo, escrevo a API e entrego a interface. Hoje meu foco é levar IA a quem planta no Vale do Ribeira, usando o celular que a pessoa já tem.
 
-### 🔴 <span style="color:red">Bio_Data</span>
+<br>
 
-> **`User:`** Yago Kurashiki  
-> **`Class:`** Desenvolvedor Back-End Jr  
-> **`Education:`** Análise e Desenvolvimento de Sistemas @ **Fatec**
+<a href="https://greenleaf-mobile.vercel.app/inicio"><img src="assets/greenleaf.svg" width="100%" alt="GreenLeaf. Fluxo: foto, preparo no celular, POST /predict, EfficientNet-B0 e HSV, regras e diagnóstico. Acurácia de 87,2%, AUC de 0,93, especificidade de 97,8% e 215 ms por foto em CPU."></a>
 
-Sou um desenvolvedor apaixonado por criar soluções limpas e escaláveis. Meu foco atual é dominar a integração entre interfaces modernas e backends robustos.
+A bacteriose pode reduzir em até 70% o peso das raízes da mandioca, e o diagnóstico ainda depende do olho de quem planta. O **GreenLeaf** analisa a foto de uma folha e responde em linguagem simples, com a área suspeita destacada na própria imagem. Os requisitos saíram de uma entrevista com um produtor de Registro. Projeto Integrador da FATEC, feito em dupla com Carlos Eduardo Takeshita.
 
----
-
-### 🔴 <span style="color:red">Tech_Arsenal</span>
+<a href="https://greenleaf-lp.vercel.app"><img src="assets/greenleaf-telas.jpg" width="100%" alt="Landing page do GreenLeaf com a folha em 3D e duas telas do app: diagnóstico grave e área destacada em vermelho sobre a folha."></a>
 
 <div align="center">
 
-| **Backend & Core** | **Frontend & UI** | **Tools & Cloud** |
-|:---:|:---:|:---:|
-| <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/java/java-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/spring/spring-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/python/python-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/nodejs/nodejs-original.svg"> | <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/react/react-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/typescript/typescript-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/html5/html5-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/css3/css3-original.svg"> | <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/git/git-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/mysql/mysql-original.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/amazonwebservices/amazonwebservices-original-wordmark.svg"> <img height="40" src="https://cdn.jsdelivr.net/gh/devicons/devicon/icons/figma/figma-original.svg"> |
+<a href="https://greenleaf-lp.vercel.app"><img src="assets/btn-lp.svg" height="46" alt="Landing page"></a> <a href="https://greenleaf-mobile.vercel.app/inicio"><img src="assets/btn-app.svg" height="46" alt="Abrir o app"></a> <a href="https://github.com/Yajoojj/Axios_Cassava_IA"><img src="assets/btn-ia.svg" height="46" alt="API da IA"></a>
 
 </div>
 
----
+> Métricas medidas em 2.140 fotos nunca vistas pelo modelo. A revocação da bacteriose está em 64,2% e a meta do projeto é 90%. O modelo ainda não foi testado com fotos do Vale do Ribeira, e o resultado não substitui um agrônomo.
 
-### 🔴 <span style="color:red">Projects</span> 
+<br>
 
-| Projeto | Stack | Descrição |
-| :--- | :---: | :--- |
-| **[🤖 Axios Cassava IA](https://github.com/Yajoojj/Axios_Cassava_IA)** | `Python` `Deep Learning` `TensorFlow` | **Novo:** Modelo de Inteligência Artificial treinado para classificação e detecção de doenças em folhas de mandioca (Cassava). |
-| **[🍃 Eco-Commit](https://github.com/Yajoojj/Eco-Commit/tree/master)** | `Python` `CLI` `Green IT` | **Destaque:** Ferramenta de linha de comando que monitora o consumo de energia de scripts e calcula a pegada de carbono. |
-| **[📺 Central Multiplataforma](https://yajoojj.github.io/Central-Multiplataforma/)** | `Js` `Frontend` | Simples projeto com foco em  diversos programas, como jogo da memória, calculadora científica e etc. |
+<a href="https://k9-assessoria.netlify.app/"><img src="assets/k9.jpg" width="100%" alt="Landing page da K9 Assessoria: Influência se faz com comunidade. Resultado se faz com estratégia."></a>
 
----
-### 🔴 <span style="color:red">Current_Studies</span>
-
-- 🤖 **I.A** Para API's e aprendizagem profunda
-- 🧩 **Java + Spring Boot** para APIs REST e aplicações web  
-- ⚛️ **React** para SPAs e componentes reutilizáveis  
-- 🗄️ **Modelagem de banco de dados** com MySQL  
-- 🌐 Boas práticas de **arquitetura web** e **integração backend/frontend**  
-
----
-
-### 🔴 <span style="color:red">System_Stats</span>
-
+**K9 Assessoria.** Site da agência de marketing de influência, em React, TypeScript e Vite, com português e espanhol no mesmo build. A interface foi verificada com Playwright de 320 a 1440 px, incluindo navegação por teclado. Para a mesma agência, desenvolvo também o K9 Casting, sistema interno em repositório privado.
 
 <div align="center">
-  <a href="https://github.com/brunobritodev/awesome-github-stats">
-    <img src="https://awesome-github-stats.azurewebsites.net/user-stats/Yajoojj?cardType=level-alternate&background=000000&title=ff0000&icon=ff0000&text=ffffff&ring=ff0000&border=000000" alt="Level Stats" />
-  </a>
+
+<a href="https://k9-assessoria.netlify.app/"><img src="assets/btn-k9.svg" height="46" alt="Ver o site da K9 Assessoria"></a>
+
 </div>
+
+<br>
+
+<img src="assets/stack.svg" width="100%" alt="Stack. IA: PyTorch, ONNX Runtime, OpenCV. Back-end: Python, FastAPI, Flask, Spring Boot, Node.js. Front-end: TypeScript, React, Vite, Three.js, Kotlin. Dados e infra: PostgreSQL, Supabase, Docker, Vercel, Render.">
+
+<img src="assets/skyline.svg" width="100%" alt="Contribuições dos últimos 12 meses desenhadas como uma cidade: cada prédio é uma semana e cada janela acesa é uma contribuição.">
+
+<details>
+<summary><b>ls ./outros-projetos</b></summary>
+<br>
+
+| Projeto | O que faz | Stack |
+| :--- | :--- | :--- |
+| [Eco-Commit](https://github.com/Yajoojj/Eco-Commit) | CLI que mede a energia de um script e estima o CO₂ emitido | Python, CodeCarbon, Typer |
+| [No Meu Ritmo](https://no-meu-ritmo.vercel.app) | Organizador de estudos com API REST documentada e relatório em PDF | Flask, Pydantic, Supabase |
+| [BookFlow API](https://github.com/Yajoojj/bookflow-api) | API de biblioteca: usuários, livros e empréstimos | Flask, SQLAlchemy, PostgreSQL |
+| [Perceptron e KNN](https://github.com/Yajoojj/at1-perceptron-knn) | Fraude, churn e recomendação implementados do zero | Python, NumPy |
+
+</details>
+
+<img src="assets/footer.svg" width="100%" alt="Fim da transmissão">
