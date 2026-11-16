@@ -149,7 +149,7 @@ def hero():
 <path d="{chamfer(40, 292, SEMI.width("DESENVOLVEDOR FULL-STACK", 21, .6) + 34, 42, 11)}" fill="{RED}"/>
 {text(SEMI, "DESENVOLVEDOR FULL-STACK", 21, 56, 321, BG, spacing=.6)}
 {text(SEMI, "Da rede neural à tela do celular.", 25, 40, 378, TEXT)}
-{text(MONO, "IA APLICADA  //  APIs  //  WEB  //  PWA", 15, 40, 412, MUTED, spacing=1)}
+{text(MONO, "CANANÉIA  //  VALE DO RIBEIRA  //  LITORAL SUL DE SP", 15, 40, 412, MUTED, spacing=1)}
 
 <path d="{stem}" fill="none" stroke="{RED}" stroke-width="2.500" opacity=".7"/>
 <path d="{outline_d}" fill="none" stroke="{GREEN}" stroke-opacity=".28" stroke-width="1"/>
@@ -177,35 +177,120 @@ def hero():
     save("hero.svg", svg(W, H, "Yago Kurashiki, desenvolvedor full-stack: da rede neural à tela do celular", defs, css, body))
 
 
+# ---------------------------------------------------------------- comum aos painéis
+def panel_head(W, label, title, right=None):
+    out = text(MONO, label, 15, 24, 34, RED, spacing=1.5)
+    out += text(DISPLAY, title, 40, 24, 74, TEXT, spacing=1)
+    if right:
+        out += text(MONO, right, 15, W - 24, 74, MUTED, anchor="end", spacing=1.5)
+    return out
+
+
+def background(W, H):
+    return f'<rect width="{W}" height="{H}" fill="{BG}"/><rect width="{W}" height="{H}" fill="url(#grid)"/>'
+
+
+def pct(seconds, cycle):
+    return f"{max(0.0, min(100.0, seconds / cycle * 100)):.2f}%"
+
+
+# ---------------------------------------------------------------- ficha
+def ficha():
+    W, H = 1000, 250
+    fields = [
+        ("CLASSE", "Full-stack", GREEN),
+        ("BASE", "Cananéia, SP", GREEN),
+        ("GUILDA", "FATEC Registro · DSM", GREEN),
+        ("MISSÃO PRINCIPAL", "GreenLeaf", RED),
+        ("CLIENTE", "K9 Assessoria", RED),
+        ("SIDE QUEST", "Java + Spring Boot", RED),
+    ]
+    col_w = (W - 48) / 3
+    body = background(W, H) + text(MONO, "// FICHA DO OPERADOR", 15, 24, 34, RED, spacing=1.5)
+    body += text(MONO, "STATUS: ONLINE", 15, W - 44, 34, GREEN, anchor="end", spacing=1.5)
+    body += f'<rect class="blink" x="{W - 36}" y="23" width="10" height="10" fill="{GREEN}"/>'
+    for i, (label, value, color) in enumerate(fields):
+        col, row = i % 3, i // 3
+        x, y = 24 + col * col_w, 58 + row * 92
+        body += f'<path d="{chamfer(x, y, col_w - 14, 78, 10)}" fill="{PANEL}" stroke="{LINE}"/>'
+        body += f'<rect x="{x}" y="{y + 12}" width="3" height="54" fill="{color}"/>'
+        body += text(MONO, label, 13, x + 18, y + 30, color, spacing=1.2)
+        body += text(SEMI, value, 26, x + 18, y + 62, TEXT)
+    css = ".blink{animation:bl 1.4s steps(1) infinite}@keyframes bl{50%{opacity:.2}}"
+    title = ("Ficha do operador. Classe: full-stack. Base: Cananéia, SP. Guilda: FATEC Registro, DSM. "
+             "Missão principal: GreenLeaf. Cliente: K9 Assessoria. Side quest: Java com Spring Boot.")
+    save("ficha.svg", svg(W, H, title, grid_pattern(), css, body))
+
+
 # ---------------------------------------------------------------- GreenLeaf
 def greenleaf():
-    W, H = 1000, 500
-    node_w, node_h, top = 296, 104, 96
-    xs = [24, 352, 680]
-    rows = [top, top + node_h + 44]
+    """Fluxo em serpentina. O pulso corre por baixo das caixas, então some ao entrar e reaparece do outro lado."""
+    W, H = 1000, 520
+    node_w, node_h, gap = 280, 104, 52
+    xs = [24, 24 + node_w + gap, 24 + 2 * (node_w + gap)]
+    rows = [96, 96 + node_h + gap]
     tag = {"CELULAR": GREEN, "REDE": AMBER, "SERVIDOR": RED}
     nodes = [
         ("01", "FOTO", "Câmera ou galeria", "CELULAR", xs[0], rows[0]),
         ("02", "PREPARO", "1280 px, sem GPS nem EXIF", "CELULAR", xs[1], rows[0]),
         ("03", "POST /predict", "HTTPS, até 8 MB", "REDE", xs[2], rows[0]),
-        ("04", "REDE + COR", "EfficientNet-B0 e HSV", "SERVIDOR", xs[2], rows[1]),
+        ("04", "REDE NEURAL", "EfficientNet-B0 + HSV", "SERVIDOR", xs[2], rows[1]),
         ("05", "REGRAS", "Risco e gravidade", "SERVIDOR", xs[1], rows[1]),
         ("06", "DIAGNÓSTICO", "Linguagem simples", "CELULAR", xs[0], rows[1]),
     ]
+    proc, travel, lead = 0.95, 0.55, 0.2
+    cycle = lead + 6 * proc + 5 * travel + 1.0
+    arrive = [lead + i * (proc + travel) for i in range(6)]
+
+    # conectores: (x1, y1, x2, y2) da borda de uma caixa até a borda da seguinte
     y0, y1 = rows[0] + node_h / 2, rows[1] + node_h / 2
-    route = f"M{xs[0] + node_w} {y0}H{xs[1]}M{xs[1] + node_w} {y0}H{xs[2]}"
-    flow = (
-        f"M{xs[0] + 40} {y0}H{xs[2] + node_w - 40}V{y1}H{xs[0] + 40}"
-    )
-    route += f"M{xs[2] + node_w / 2} {rows[0] + node_h}V{rows[1]}M{xs[2]} {y1}H{xs[1] + node_w}M{xs[1]} {y1}H{xs[0] + node_w}"
-    cycle = 9
+    xm = xs[2] + node_w / 2
+    links = [
+        (xs[0] + node_w, y0, xs[1], y0),
+        (xs[1] + node_w, y0, xs[2], y0),
+        (xm, rows[0] + node_h, xm, rows[1]),
+        (xs[2], y1, xs[1] + node_w, y1),
+        (xs[1], y1, xs[0] + node_w, y1),
+    ]
+    css = ""
+    wires, packets = "", ""
+    plen = 26
+    for i, (ax, ay, bx, by) in enumerate(links):
+        wires += f'<path d="M{ax} {ay}L{bx} {by}" stroke="{LINE}" stroke-width="2"/>'
+        dx, dy = (bx > ax) - (bx < ax), (by > ay) - (by < ay)
+        # começa inteiro escondido sob a caixa de origem e termina inteiro sob a de destino
+        if dx:
+            sx = ax - plen - 4 if dx > 0 else ax + 4
+            ex = bx + 4 if dx > 0 else bx - plen - 4
+            shape = f'<rect x="{sx}" y="{ay - 2}" width="{plen}" height="4" rx="2" fill="{GREEN}"/>'
+            glow = f'<rect x="{sx - 6}" y="{ay - 6}" width="{plen + 12}" height="12" rx="6" fill="{GREEN}" opacity=".18"/>'
+            move = f"translateX({ex - sx}px)"
+        else:
+            sy = ay - plen - 4
+            ey = by + 4
+            shape = f'<rect x="{ax - 2}" y="{sy}" width="4" height="{plen}" rx="2" fill="{GREEN}"/>'
+            glow = f'<rect x="{ax - 6}" y="{sy - 6}" width="12" height="{plen + 12}" rx="6" fill="{GREEN}" opacity=".18"/>'
+            move = f"translateY({ey - sy}px)"
+        depart = arrive[i] + proc
+        land = arrive[i + 1]
+        css += (
+            f"@keyframes k{i}{{0%,{pct(depart, cycle)}{{transform:none;animation-timing-function:cubic-bezier(.45,0,.55,1)}}"
+            f"{pct(land, cycle)},100%{{transform:{move}}}}}.k{i}{{animation:k{i} {cycle:.2f}s infinite}}"
+        )
+        packets += f'<g class="k{i}">{glow}{shape}</g>'
+
     node_svg = ""
     for i, (num, title, sub, where, x, y) in enumerate(nodes):
         color = tag[where]
-        delay = i / 6 * cycle
+        a, done = arrive[i], arrive[i] + proc
+        css += (
+            f"@keyframes n{i}{{0%,{pct(a - 0.01, cycle)}{{opacity:0}}{pct(a + 0.12, cycle)},{pct(done, cycle)}{{opacity:1}}"
+            f"{pct(done + 0.3, cycle)},94%{{opacity:.32}}100%{{opacity:0}}}}.n{i}{{opacity:0;animation:n{i} {cycle:.2f}s linear infinite}}"
+        )
+        shape = chamfer(x, y, node_w, node_h, 14)
         node_svg += (
-            f'<path d="{chamfer(x, y, node_w, node_h, 14)}" fill="{PANEL}" stroke="{LINE}"/>'
-            f'<path class="lit" style="animation-delay:{delay:.2f}s" d="{chamfer(x, y, node_w, node_h, 14)}" fill="{color}" fill-opacity=".1" stroke="{color}" stroke-width="1.500"/>'
+            f'<path d="{shape}" fill="{PANEL}" stroke="{LINE}"/>'
+            f'<path class="n{i}" d="{shape}" fill="{color}" fill-opacity=".1" stroke="{color}" stroke-width="1.5"/>'
             + text(MONO, num, 18, x + 18, y + 34, color)
             + text(MONO, where, 13, x + node_w - 16, y + 32, color, anchor="end", spacing=1)
             + text(SEMI, title, 27, x + 18, y + 66, TEXT)
@@ -218,71 +303,121 @@ def greenleaf():
         ("97,8%", "ESPECIFICIDADE", "bacteriose", .978),
         ("215 ms", "POR FOTO", "inferência em CPU", None),
     ]
-    tile_w, gap = 232, 16
+    tile_w = 232
     metric_svg = ""
     for i, (value, label, note, fill) in enumerate(metrics):
-        x = 24 + i * (tile_w + gap)
-        y = 368
+        x, y = 24 + i * (tile_w + 16), 386
         metric_svg += text(DISPLAY, value, 42, x, y + 42, GREEN if fill else TEXT)
         metric_svg += text(MONO, label, 15, x, y + 66, TEXT, spacing=1)
         metric_svg += text(MONO, note, 14, x, y + 86, MUTED)
         metric_svg += f'<rect x="{x}" y="{y + 98}" width="{tile_w - 16}" height="4" fill="{LINE}"/>'
         if fill:
             metric_svg += f'<rect class="bar" x="{x}" y="{y + 98}" width="{(tile_w - 16) * fill:.1f}" height="4" fill="{GREEN}"/>'
+    css += (".bar{transform-box:fill-box;transform-origin:0 0;animation:bar 1.6s cubic-bezier(.2,.7,.2,1) both}"
+            "@keyframes bar{from{transform:scaleX(0)}}")
 
-    css = f"""
-.flow{{fill:none;stroke:{GREEN};stroke-width:3;stroke-dasharray:44 2000;animation:flow {cycle}s linear infinite}}
-@keyframes flow{{from{{stroke-dashoffset:44}}to{{stroke-dashoffset:-1800}}}}
-.lit{{opacity:0;animation:lit {cycle}s linear infinite}}
-@keyframes lit{{0%,18%{{opacity:1}}26%,100%{{opacity:0}}}}
-.bar{{transform-box:fill-box;transform-origin:0 0;animation:bar 1.6s cubic-bezier(.2,.7,.2,1) both}}
-@keyframes bar{{from{{transform:scaleX(0)}}}}
-"""
-    body = f"""
-<rect width="{W}" height="{H}" fill="{BG}"/><rect width="{W}" height="{H}" fill="url(#grid)"/>
-{text(MONO, "// PROJETO PRINCIPAL", 15, 24, 34, RED, spacing=1.500)}
-{text(DISPLAY, "GREENLEAF", 40, 24, 74, TEXT, spacing=1)}
-{text(MONO, "DA FOTO AO DIAGNÓSTICO", 15, W - 24, 74, MUTED, anchor="end", spacing=1.500)}
-<path d="{route}" fill="none" stroke="{LINE}" stroke-width="2"/>
-{node_svg}
-<path class="flow" d="{flow}"/>
-{metric_svg}
-"""
-    save("greenleaf.svg", svg(W, H, "Fluxo do GreenLeaf: foto, preparo no celular, POST /predict, EfficientNet-B0 e HSV, regras e diagnóstico. Acurácia 87,2%, AUC 0,93, especificidade 97,8%, 215 ms por foto.", grid_pattern(), css, body))
+    body = (background(W, H) + panel_head(W, "// MISSÃO PRINCIPAL", "GREENLEAF", "DA FOTO AO DIAGNÓSTICO")
+            + wires + packets + node_svg + metric_svg)
+    title = ("Fluxo do GreenLeaf: foto, preparo no celular, POST /predict, rede neural EfficientNet-B0 com análise HSV, "
+             "regras e diagnóstico. Acurácia de 87,2%, AUC de 0,93, especificidade de 97,8%, 215 ms por foto em CPU.")
+    save("greenleaf.svg", svg(W, H, title, grid_pattern(), css, body))
 
 
-# ---------------------------------------------------------------- stack
-def stack(icon_dir):
-    rows = [
-        ("IA", GREEN, [("pytorch", "PyTorch"), ("onnx", "ONNX Runtime"), ("opencv", "OpenCV")]),
-        ("BACK-END", RED, [("python", "Python"), ("fastapi", "FastAPI"), ("flask", "Flask"), ("springboot", "Spring Boot"), ("nodedotjs", "Node.js")]),
-        ("FRONT-END", GREEN, [("typescript", "TypeScript"), ("react", "React"), ("vite", "Vite"), ("threedotjs", "Three.js"), ("kotlin", "Kotlin")]),
-        ("DADOS E INFRA", RED, [("postgresql", "PostgreSQL"), ("supabase", "Supabase"), ("docker", "Docker"), ("vercel", "Vercel"), ("render", "Render")]),
+# ---------------------------------------------------------------- decisões
+def decisoes():
+    W, H = 1000, 546
+    card_w, card_h = 470, 206
+    cards = [
+        ("01", "MEDIR ANTES DE SOMAR", GREEN,
+         ["Só pela cor (HSV), o F1 da bacteriose foi 9,8%.", "Com a rede neural, 62,8%. A cor ficou só para", "medir a área da mancha, não para dar a nota."],
+         "Axios_Cassava_IA · training/reports/metrics.md"),
+        ("02", "A FOTO SAI LIMPA", RED,
+         ["O próprio celular gira a foto, reduz para", "1280 px e recomprime antes de enviar.", "EXIF e GPS ficam para trás."],
+         "Greenleaf-Mobile · BrowserImagePreparer.ts"),
+        ("03", "FUNCIONA SEM SINAL", AMBER,
+         ["Histórico em IndexedDB e uma fila que envia", "quando o sinal volta. O modo demonstração", "roda até em modo avião."],
+         "Greenleaf-Mobile · src/data"),
+        ("04", "LEGÍVEL NO SOL", GREEN,
+         ["Gravidade sempre com cor, ícone e texto.", "Contraste mínimo de 4,5:1 e alvos de", "toque de 48 px, pensando na roça."],
+         "Greenleaf-Mobile · docs/design-system.md"),
     ]
-    W, H = 1000, 340
-    body = f'<rect width="{W}" height="{H}" fill="{BG}"/><rect width="{W}" height="{H}" fill="url(#grid)"/>'
-    body += text(MONO, "// ARSENAL", 15, 24, 34, RED, spacing=1.500)
-    y = 56
-    delay = 0
-    for label, color, items in rows:
-        body += f'<path d="M24 {y + 62}H{W - 24}" stroke="{LINE}"/>'
-        body += text(MONO, label, 15, 24, y + 37, color, spacing=1.200)
-        for i, (slug, name) in enumerate(items):
-            source = (icon_dir / f"{slug}.svg").read_text(encoding="utf-8")
-            d = re.search(r'd="([^"]+)"', source).group(1)
-            x = 170 + i * 163
-            body += (
-                f'<g class="ico" style="animation-delay:{delay:.2f}s"><g transform="translate({x} {y + 18}) scale(1.08)">'
-                f'<path fill="{TEXT}" d="{d}"/></g></g>'
-            )
-            body += text(MONO, name, 15, x + 33, y + 37, TEXT)
-            delay += 0.28
-        y += 68
-    css = """
-.ico{animation:ico 5.600s linear infinite}
-@keyframes ico{0%,8%{opacity:1}0%{opacity:.45}14%,100%{opacity:.72}}
-"""
-    save("stack.svg", svg(W, H, "Stack. IA: PyTorch, ONNX Runtime, OpenCV. Back-end: Python, FastAPI, Flask, Spring Boot, Node.js. Front-end: TypeScript, React, Vite, Three.js, Kotlin. Dados e infra: PostgreSQL, Supabase, Docker, Vercel, Render.", grid_pattern(), css, body))
+    body = background(W, H) + panel_head(W, "// DECISÕES QUE EU DEFENDO", "POR TRÁS DO GREENLEAF")
+    css = ""
+    for i, (num, title, color, lines, proof) in enumerate(cards):
+        x = 24 + (i % 2) * (card_w + 12)
+        y = 100 + (i // 2) * (card_h + 12)
+        body += f'<path d="{chamfer(x, y, card_w, card_h, 14)}" fill="{PANEL}" stroke="{LINE}"/>'
+        body += text(MONO, num, 16, x + 20, y + 32, color)
+        body += text(SEMI, title, 24, x + 56, y + 33, TEXT, spacing=.5)
+        for j, line in enumerate(lines):
+            body += text(MONO, line, 15, x + 20, y + 66 + j * 22, MUTED)
+        vy = y + 140
+        if i == 0:
+            for k, (label, value, frac, c) in enumerate((("REDE", "62,8%", .628, GREEN), ("COR ", "9,8%", .098, RED))):
+                by = vy + k * 16
+                body += text(MONO, label, 12, x + 20, by + 9, TEXT)
+                body += f'<rect x="{x + 62}" y="{by}" width="300" height="8" fill="{LINE}"/>'
+                body += f'<rect class="grow" x="{x + 62}" y="{by}" width="{300 * frac:.1f}" height="8" fill="{c}"/>'
+                body += text(MONO, value, 12, x + 372, by + 9, c)
+        elif i == 1:
+            chip = lambda cx, label, c: (f'<path d="{chamfer(cx, vy, 170, 26, 6)}" fill="none" stroke="{c}"/>'
+                                         + text(MONO, label, 13, cx + 85, vy + 18, c, anchor="middle"))
+            body += chip(x + 20, "JPG · GPS · EXIF", MUTED)
+            body += f'<path d="M{x + 106} {vy + 13}H{x + 190}" stroke="{RED}" stroke-width="1.5"/>'
+            body += f'<path class="pulse" d="M{x + 204} {vy + 13}H{x + 236}M{x + 228} {vy + 7}L{x + 236} {vy + 13}L{x + 228} {vy + 19}" fill="none" stroke="{TEXT}" stroke-width="1.5"/>'
+            body += chip(x + 250, "JPG · 1280 PX", GREEN)
+        elif i == 2:
+            for k in range(6):
+                body += f'<rect class="q" style="animation-delay:{k * .45:.2f}s" x="{x + 20 + k * 30}" y="{vy + 4}" width="22" height="18" fill="{AMBER}"/>'
+            body += text(MONO, "» ENVIA QUANDO VOLTA", 13, x + 210, vy + 18, AMBER)
+            css += ".q{opacity:.18;animation:q 2.7s steps(1) infinite}@keyframes q{0%,30%{opacity:1}}"
+        else:
+            body += text(DISPLAY, "4,5:1", 30, x + 20, vy + 26, GREEN)
+            body += f'<rect x="{x + 130}" y="{vy - 2}" width="30" height="30" fill="none" stroke="{GREEN}" stroke-dasharray="4 3"/>'
+            body += text(MONO, "48 PX", 13, x + 170, vy + 18, GREEN)
+        body += f'<path d="M{x + 20} {y + card_h - 30}H{x + card_w - 20}" stroke="{LINE}"/>'
+        body += text(MONO, "> " + proof, 12, x + 20, y + card_h - 12, MUTED)
+    css += (".grow{transform-box:fill-box;transform-origin:0 0;animation:gr 1.8s cubic-bezier(.2,.7,.2,1) both}"
+            "@keyframes gr{from{transform:scaleX(0)}}.pulse{animation:pu 1.6s ease-in-out infinite}@keyframes pu{50%{opacity:.3}}")
+    title = ("Decisões por trás do GreenLeaf. 01: medir antes de somar, a cor sozinha teve F1 de 9,8% contra 62,8% da rede, então só mede a área da mancha. "
+             "02: a foto sai limpa, reduzida a 1280 px e sem EXIF nem GPS. 03: funciona sem sinal, com fila offline e modo demonstração. "
+             "04: legível no sol, contraste de 4,5:1 e alvos de 48 px.")
+    save("decisoes.svg", svg(W, H, title, grid_pattern(), css, body))
+
+
+# ---------------------------------------------------------------- ferramentas
+def ferramentas(icon_dir):
+    rows = [
+        ("pytorch", "PyTorch + timm", "treino da EfficientNet-B0 em 5 classes", "Axios_Cassava_IA"),
+        ("onnx", "ONNX Runtime", "inferência em CPU, 215 ms por foto", "Axios_Cassava_IA"),
+        ("fastapi", "FastAPI + Docker", "/predict, /health e /metrics no Render", "Axios_Cassava_IA"),
+        ("react", "React + TypeScript", "PWA instalável em PT e EN, testada com Vitest", "Greenleaf-Mobile"),
+        ("supabase", "Supabase", "Auth, Postgres com RLS testado e Storage", "Greenleaf-Mobile"),
+        ("threedotjs", "Three.js", "folha 3D gerada por código, com fallback em SVG", "Greenleaf-LP"),
+        ("flask", "Flask + Pydantic", "API REST com Swagger e relatório em PDF", "no-meu-ritmo"),
+        ("python", "Python + NumPy", "Perceptron e KNN escritos do zero", "at1-perceptron-knn"),
+        ("springboot", "Spring Boot", "side quest atual: APIs REST em Java", "estudando"),
+    ]
+    W = 1000
+    top, row_h = 100, 44
+    H = top + len(rows) * row_h + 20
+    body = background(W, H) + panel_head(W, "// TECH_ARSENAL", "FERRAMENTAS, COM ENDEREÇO", "CADA UMA APONTA PRO REPO")
+    cycle = len(rows) * 0.9
+    body += (f'<rect class="cur" x="16" y="{top}" width="{W - 32}" height="{row_h}" fill="{GREEN}" fill-opacity=".07"/>'
+             f'<rect class="cur" x="16" y="{top}" width="3" height="{row_h}" fill="{GREEN}"/>')
+    for i, (slug, name, use, repo) in enumerate(rows):
+        y = top + i * row_h
+        d = re.search(r'd="([^"]+)"', (icon_dir / f"{slug}.svg").read_text(encoding="utf-8")).group(1)
+        study = repo == "estudando"
+        body += f'<path d="M24 {y + row_h}H{W - 24}" stroke="{LINE}"/>'
+        body += f'<g transform="translate(32 {y + 11}) scale(.92)"><path fill="{AMBER if study else TEXT}" d="{d}"/></g>'
+        body += text(SEMI, name, 19, 72, y + 29, TEXT)
+        body += text(MONO, use, 15, 300, y + 28, MUTED)
+        body += text(MONO, repo.upper() if study else repo, 13, W - 32, y + 28, AMBER if study else GREEN, anchor="end", spacing=.5)
+    css = (f".cur{{animation:cur {cycle:.1f}s steps({len(rows)}) infinite}}"
+           f"@keyframes cur{{to{{transform:translateY({len(rows) * row_h}px)}}}}")
+    title = "Ferramentas e onde cada uma é usada: " + "; ".join(f"{n}: {u} ({r})" for _, n, u, r in rows) + "."
+    save("ferramentas.svg", svg(W, H, title, grid_pattern(), css, body))
 
 
 # ---------------------------------------------------------------- botões
@@ -306,7 +441,7 @@ def footer():
         f'<rect width="9" height="18" fill="{RED}"/></pattern>'
     )
     css = ".c{animation:c 1s steps(1) infinite}@keyframes c{50%{opacity:0}}"
-    label = "FIM DA TRANSMISSÃO"
+    label = "FIM DA TRANSMISSÃO · VALEU POR LER ATÉ AQUI"
     width = MONO.width(label, 18, 3)
     body = f"""
 <rect width="{W}" height="{H}" fill="{BG}"/>
@@ -320,8 +455,10 @@ def footer():
 if __name__ == "__main__":
     icons = Path(sys.argv[1]) if len(sys.argv) > 1 else Path(__file__).parent / "icons"
     hero()
+    ficha()
     greenleaf()
-    stack(icons)
+    decisoes()
+    ferramentas(icons)
     button("btn-linkedin.svg", "LINKEDIN", RED, "LinkedIn")
     button("btn-email.svg", "E-MAIL", RED, "E-mail")
     button("btn-lp.svg", "LANDING PAGE", GREEN, "Landing page do GreenLeaf")

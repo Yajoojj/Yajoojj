@@ -6,11 +6,11 @@
 
 </div>
 
-Estudo Desenvolvimento de Software Multiplataforma na **FATEC Registro** e construo produtos de ponta a ponta: treino o modelo, escrevo a API e entrego a interface. Hoje meu foco é estudar e melhorar minhas skills como DEV.
+Sou de Cananéia, no litoral sul de São Paulo, e escrevo software pensando em quem nunca vai abrir um terminal: o produtor que fotografa uma folha no meio da roça, com sol batendo na tela e sinal fraco. Estudo Desenvolvimento de Software Multiplataforma na **FATEC Registro** e gosto de pegar um problema do começo ao fim: treinar o modelo, colocar a API no ar e desenhar a tela.
 
-<br>
+<img src="assets/ficha.svg" width="100%" alt="Ficha do operador. Classe: full-stack. Base: Cananéia, SP. Guilda: FATEC Registro, DSM. Missão principal: GreenLeaf. Cliente: K9 Assessoria. Side quest: Java com Spring Boot.">
 
-<a href="https://greenleaf-mobile.vercel.app/inicio"><img src="assets/greenleaf.svg" width="100%" alt="GreenLeaf. Fluxo: foto, preparo no celular, POST /predict, EfficientNet-B0 e HSV, regras e diagnóstico. Acurácia de 87,2%, AUC de 0,93, especificidade de 97,8% e 215 ms por foto em CPU."></a>
+<a href="https://greenleaf-mobile.vercel.app/inicio"><img src="assets/greenleaf.svg" width="100%" alt="Missão principal: GreenLeaf. Fluxo: foto, preparo no celular, POST /predict, rede neural EfficientNet-B0 com HSV, regras e diagnóstico. Acurácia de 87,2%, AUC de 0,93, especificidade de 97,8% e 215 ms por foto em CPU."></a>
 
 A bacteriose pode reduzir em até 70% o peso das raízes da mandioca, e o diagnóstico ainda depende do olho de quem planta. O **GreenLeaf** analisa a foto de uma folha e responde em linguagem simples, com a área suspeita destacada na própria imagem. Os requisitos saíram de uma entrevista com um produtor de Registro. Projeto Integrador da FATEC.
 
@@ -21,6 +21,8 @@ A bacteriose pode reduzir em até 70% o peso das raízes da mandioca, e o diagn�
 <a href="https://greenleaf-lp.vercel.app"><img src="assets/btn-lp.svg" height="46" alt="Landing page"></a> <a href="https://greenleaf-mobile.vercel.app/inicio"><img src="assets/btn-app.svg" height="46" alt="Abrir o app"></a> <a href="https://github.com/Yajoojj/Axios_Cassava_IA"><img src="assets/btn-ia.svg" height="46" alt="API da IA"></a>
 
 </div>
+
+<img src="assets/decisoes.svg" width="100%" alt="Decisões por trás do GreenLeaf: medir antes de somar, já que a cor sozinha teve F1 de 9,8% contra 62,8% da rede; a foto sai limpa, reduzida a 1280 px e sem EXIF nem GPS; funciona sem sinal, com fila offline; legível no sol, com contraste de 4,5:1 e alvos de 48 px.">
 
 <br>
 
@@ -34,13 +36,15 @@ A bacteriose pode reduzir em até 70% o peso das raízes da mandioca, e o diagn�
 
 </div>
 
-<img src="assets/stack.svg" width="100%" alt="Stack. IA: PyTorch, ONNX Runtime, OpenCV. Back-end: Python, FastAPI, Flask, Spring Boot, Node.js. Front-end: TypeScript, React, Vite, Three.js, Kotlin. Dados e infra: PostgreSQL, Supabase, Docker, Vercel, Render.">
+<img src="assets/ferramentas.svg" width="100%" alt="Ferramentas e onde cada uma é usada: PyTorch e timm no treino da EfficientNet-B0; ONNX Runtime na inferência em CPU; FastAPI e Docker na API; React e TypeScript no PWA; Supabase com RLS; Three.js na folha 3D; Flask e Pydantic no No Meu Ritmo; Python e NumPy no Perceptron e KNN; Spring Boot em estudo.">
 
 <img src="assets/skyline.svg" width="100%" alt="Contribuições dos últimos 12 meses desenhadas como uma cidade: cada prédio é uma semana e cada janela acesa é uma contribuição.">
 
 <details>
-<summary><b>ls ./outros-projetos</b></summary>
+<summary><b>ls ./side-quests</b></summary>
 <br>
+
+Projetos menores, de aula ou de curiosidade, que ensinaram alguma coisa no caminho.
 
 | Projeto | O que faz | Stack |
 | :--- | :--- | :--- |
@@ -51,4 +55,4 @@ A bacteriose pode reduzir em até 70% o peso das raízes da mandioca, e o diagn�
 
 </details>
 
-<img src="assets/footer.svg" width="100%" alt="Fim da transmissão">
+<img src="assets/footer.svg" width="100%" alt="Fim da transmissão. Valeu por ler até aqui.">
