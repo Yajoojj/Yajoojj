@@ -149,7 +149,6 @@ def hero():
 <path d="{chamfer(40, 292, SEMI.width("DESENVOLVEDOR FULL-STACK", 21, .6) + 34, 42, 11)}" fill="{RED}"/>
 {text(SEMI, "DESENVOLVEDOR FULL-STACK", 21, 56, 321, BG, spacing=.6)}
 {text(SEMI, "Da rede neural à tela do celular.", 25, 40, 378, TEXT)}
-{text(MONO, "CANANÉIA  //  VALE DO RIBEIRA  //  LITORAL SUL DE SP", 15, 40, 412, MUTED, spacing=1)}
 
 <path d="{stem}" fill="none" stroke="{RED}" stroke-width="2.500" opacity=".7"/>
 <path d="{outline_d}" fill="none" stroke="{GREEN}" stroke-opacity=".28" stroke-width="1"/>
@@ -194,32 +193,24 @@ def pct(seconds, cycle):
     return f"{max(0.0, min(100.0, seconds / cycle * 100)):.2f}%"
 
 
-# ---------------------------------------------------------------- ficha
+# ---------------------------------------------------------------- sobre
 def ficha():
-    W, H = 1000, 250
+    W, H = 1000, 160
     fields = [
-        ("CLASSE", "Full-stack", GREEN),
-        ("BASE", "Cananéia, SP", GREEN),
-        ("GUILDA", "FATEC Registro · DSM", GREEN),
-        ("MISSÃO PRINCIPAL", "GreenLeaf", RED),
+        ("ÁREA", "Full-stack", GREEN),
+        ("FACULDADE", "FATEC Registro · DSM", GREEN),
         ("CLIENTE", "K9 Assessoria", RED),
-        ("SIDE QUEST", "Java + Spring Boot", RED),
     ]
     col_w = (W - 48) / 3
-    body = background(W, H) + text(MONO, "// FICHA DO OPERADOR", 15, 24, 34, RED, spacing=1.5)
-    body += text(MONO, "STATUS: ONLINE", 15, W - 44, 34, GREEN, anchor="end", spacing=1.5)
-    body += f'<rect class="blink" x="{W - 36}" y="23" width="10" height="10" fill="{GREEN}"/>'
+    body = background(W, H) + text(MONO, "// SOBRE", 15, 24, 34, RED, spacing=1.5)
     for i, (label, value, color) in enumerate(fields):
-        col, row = i % 3, i // 3
-        x, y = 24 + col * col_w, 58 + row * 92
+        x, y = 24 + i * col_w, 58
         body += f'<path d="{chamfer(x, y, col_w - 14, 78, 10)}" fill="{PANEL}" stroke="{LINE}"/>'
         body += f'<rect x="{x}" y="{y + 12}" width="3" height="54" fill="{color}"/>'
         body += text(MONO, label, 13, x + 18, y + 30, color, spacing=1.2)
         body += text(SEMI, value, 26, x + 18, y + 62, TEXT)
-    css = ".blink{animation:bl 1.4s steps(1) infinite}@keyframes bl{50%{opacity:.2}}"
-    title = ("Ficha do operador. Classe: full-stack. Base: Cananéia, SP. Guilda: FATEC Registro, DSM. "
-             "Missão principal: GreenLeaf. Cliente: K9 Assessoria. Side quest: Java com Spring Boot.")
-    save("ficha.svg", svg(W, H, title, grid_pattern(), css, body))
+    title = "Sobre. Área: full-stack. Faculdade: FATEC Registro, DSM. Cliente: K9 Assessoria."
+    save("ficha.svg", svg(W, H, title, grid_pattern(), "", body))
 
 
 # ---------------------------------------------------------------- GreenLeaf
@@ -323,101 +314,41 @@ def greenleaf():
     save("greenleaf.svg", svg(W, H, title, grid_pattern(), css, body))
 
 
-# ---------------------------------------------------------------- decisões
-def decisoes():
-    W, H = 1000, 546
-    card_w, card_h = 470, 206
-    cards = [
-        ("01", "MEDIR ANTES DE SOMAR", GREEN,
-         ["Só pela cor (HSV), o F1 da bacteriose foi 9,8%.", "Com a rede neural, 62,8%. A cor ficou só para", "medir a área da mancha, não para dar a nota."],
-         "Axios_Cassava_IA · training/reports/metrics.md"),
-        ("02", "A FOTO SAI LIMPA", RED,
-         ["O próprio celular gira a foto, reduz para", "1280 px e recomprime antes de enviar.", "EXIF e GPS ficam para trás."],
-         "Greenleaf-Mobile · BrowserImagePreparer.ts"),
-        ("03", "FUNCIONA SEM SINAL", AMBER,
-         ["Histórico em IndexedDB e uma fila que envia", "quando o sinal volta. O modo demonstração", "roda até em modo avião."],
-         "Greenleaf-Mobile · src/data"),
-        ("04", "LEGÍVEL NO SOL", GREEN,
-         ["Gravidade sempre com cor, ícone e texto.", "Contraste mínimo de 4,5:1 e alvos de", "toque de 48 px, pensando na roça."],
-         "Greenleaf-Mobile · docs/design-system.md"),
-    ]
-    body = background(W, H) + panel_head(W, "// DECISÕES QUE EU DEFENDO", "POR TRÁS DO GREENLEAF")
-    css = ""
-    for i, (num, title, color, lines, proof) in enumerate(cards):
-        x = 24 + (i % 2) * (card_w + 12)
-        y = 100 + (i // 2) * (card_h + 12)
-        body += f'<path d="{chamfer(x, y, card_w, card_h, 14)}" fill="{PANEL}" stroke="{LINE}"/>'
-        body += text(MONO, num, 16, x + 20, y + 32, color)
-        body += text(SEMI, title, 24, x + 56, y + 33, TEXT, spacing=.5)
-        for j, line in enumerate(lines):
-            body += text(MONO, line, 15, x + 20, y + 66 + j * 22, MUTED)
-        vy = y + 140
-        if i == 0:
-            for k, (label, value, frac, c) in enumerate((("REDE", "62,8%", .628, GREEN), ("COR ", "9,8%", .098, RED))):
-                by = vy + k * 16
-                body += text(MONO, label, 12, x + 20, by + 9, TEXT)
-                body += f'<rect x="{x + 62}" y="{by}" width="300" height="8" fill="{LINE}"/>'
-                body += f'<rect class="grow" x="{x + 62}" y="{by}" width="{300 * frac:.1f}" height="8" fill="{c}"/>'
-                body += text(MONO, value, 12, x + 372, by + 9, c)
-        elif i == 1:
-            chip = lambda cx, label, c: (f'<path d="{chamfer(cx, vy, 170, 26, 6)}" fill="none" stroke="{c}"/>'
-                                         + text(MONO, label, 13, cx + 85, vy + 18, c, anchor="middle"))
-            body += chip(x + 20, "JPG · GPS · EXIF", MUTED)
-            body += f'<path d="M{x + 106} {vy + 13}H{x + 190}" stroke="{RED}" stroke-width="1.5"/>'
-            body += f'<path class="pulse" d="M{x + 204} {vy + 13}H{x + 236}M{x + 228} {vy + 7}L{x + 236} {vy + 13}L{x + 228} {vy + 19}" fill="none" stroke="{TEXT}" stroke-width="1.5"/>'
-            body += chip(x + 250, "JPG · 1280 PX", GREEN)
-        elif i == 2:
-            for k in range(6):
-                body += f'<rect class="q" style="animation-delay:{k * .45:.2f}s" x="{x + 20 + k * 30}" y="{vy + 4}" width="22" height="18" fill="{AMBER}"/>'
-            body += text(MONO, "» ENVIA QUANDO VOLTA", 13, x + 210, vy + 18, AMBER)
-            css += ".q{opacity:.18;animation:q 2.7s steps(1) infinite}@keyframes q{0%,30%{opacity:1}}"
-        else:
-            body += text(DISPLAY, "4,5:1", 30, x + 20, vy + 26, GREEN)
-            body += f'<rect x="{x + 130}" y="{vy - 2}" width="30" height="30" fill="none" stroke="{GREEN}" stroke-dasharray="4 3"/>'
-            body += text(MONO, "48 PX", 13, x + 170, vy + 18, GREEN)
-        body += f'<path d="M{x + 20} {y + card_h - 30}H{x + card_w - 20}" stroke="{LINE}"/>'
-        body += text(MONO, "> " + proof, 12, x + 20, y + card_h - 12, MUTED)
-    css += (".grow{transform-box:fill-box;transform-origin:0 0;animation:gr 1.8s cubic-bezier(.2,.7,.2,1) both}"
-            "@keyframes gr{from{transform:scaleX(0)}}.pulse{animation:pu 1.6s ease-in-out infinite}@keyframes pu{50%{opacity:.3}}")
-    title = ("Decisões por trás do GreenLeaf. 01: medir antes de somar, a cor sozinha teve F1 de 9,8% contra 62,8% da rede, então só mede a área da mancha. "
-             "02: a foto sai limpa, reduzida a 1280 px e sem EXIF nem GPS. 03: funciona sem sinal, com fila offline e modo demonstração. "
-             "04: legível no sol, contraste de 4,5:1 e alvos de 48 px.")
-    save("decisoes.svg", svg(W, H, title, grid_pattern(), css, body))
-
-
-# ---------------------------------------------------------------- ferramentas
-def ferramentas(icon_dir):
+# ---------------------------------------------------------------- stack
+def stack(icon_dir):
     rows = [
-        ("pytorch", "PyTorch + timm", "treino da EfficientNet-B0 em 5 classes", "Axios_Cassava_IA"),
-        ("onnx", "ONNX Runtime", "inferência em CPU, 215 ms por foto", "Axios_Cassava_IA"),
-        ("fastapi", "FastAPI + Docker", "/predict, /health e /metrics no Render", "Axios_Cassava_IA"),
-        ("react", "React + TypeScript", "PWA instalável em PT e EN, testada com Vitest", "Greenleaf-Mobile"),
-        ("supabase", "Supabase", "Auth, Postgres com RLS testado e Storage", "Greenleaf-Mobile"),
-        ("threedotjs", "Three.js", "folha 3D gerada por código, com fallback em SVG", "Greenleaf-LP"),
-        ("flask", "Flask + Pydantic", "API REST com Swagger e relatório em PDF", "no-meu-ritmo"),
-        ("python", "Python + NumPy", "Perceptron e KNN escritos do zero", "at1-perceptron-knn"),
-        ("springboot", "Spring Boot", "side quest atual: APIs REST em Java", "estudando"),
+        ("IA", GREEN, [("pytorch", "PyTorch", "Axios_Cassava_IA"), ("onnx", "ONNX Runtime", "Axios_Cassava_IA")]),
+        ("BACK-END", RED, [("python", "Python", "at1-perceptron-knn"), ("fastapi", "FastAPI", "Axios_Cassava_IA"),
+                           ("flask", "Flask", "no-meu-ritmo"), ("springboot", "Spring Boot", "estudando")]),
+        ("FRONT-END", GREEN, [("typescript", "TypeScript", "Greenleaf-Mobile"), ("react", "React", "Greenleaf-Mobile"),
+                              ("vite", "Vite", "Greenleaf-Mobile"), ("threedotjs", "Three.js", "Greenleaf-LP")]),
+        ("DADOS E INFRA", RED, [("postgresql", "PostgreSQL", "bookflow-api"), ("supabase", "Supabase", "Greenleaf-Mobile"),
+                                ("docker", "Docker", "Axios_Cassava_IA"), ("vercel", "Vercel", "Greenleaf-LP"),
+                                ("render", "Render", "Axios_Cassava_IA")]),
     ]
-    W = 1000
-    top, row_h = 100, 44
-    H = top + len(rows) * row_h + 20
-    body = background(W, H) + panel_head(W, "// TECH_ARSENAL", "FERRAMENTAS, COM ENDEREÇO", "CADA UMA APONTA PRO REPO")
-    cycle = len(rows) * 0.9
-    body += (f'<rect class="cur" x="16" y="{top}" width="{W - 32}" height="{row_h}" fill="{GREEN}" fill-opacity=".07"/>'
-             f'<rect class="cur" x="16" y="{top}" width="3" height="{row_h}" fill="{GREEN}"/>')
-    for i, (slug, name, use, repo) in enumerate(rows):
-        y = top + i * row_h
-        d = re.search(r'd="([^"]+)"', (icon_dir / f"{slug}.svg").read_text(encoding="utf-8")).group(1)
-        study = repo == "estudando"
-        body += f'<path d="M24 {y + row_h}H{W - 24}" stroke="{LINE}"/>'
-        body += f'<g transform="translate(32 {y + 11}) scale(.92)"><path fill="{AMBER if study else TEXT}" d="{d}"/></g>'
-        body += text(SEMI, name, 19, 72, y + 29, TEXT)
-        body += text(MONO, use, 15, 300, y + 28, MUTED)
-        body += text(MONO, repo.upper() if study else repo, 13, W - 32, y + 28, AMBER if study else GREEN, anchor="end", spacing=.5)
-    css = (f".cur{{animation:cur {cycle:.1f}s steps({len(rows)}) infinite}}"
-           f"@keyframes cur{{to{{transform:translateY({len(rows) * row_h}px)}}}}")
-    title = "Ferramentas e onde cada uma é usada: " + "; ".join(f"{n}: {u} ({r})" for _, n, u, r in rows) + "."
-    save("ferramentas.svg", svg(W, H, title, grid_pattern(), css, body))
+    W, row_h = 1000, 76
+    H = 56 + len(rows) * row_h + 16
+    body = background(W, H) + text(MONO, "// ARSENAL", 15, 24, 34, RED, spacing=1.5)
+    y, delay = 56, 0
+    for label, color, items in rows:
+        body += f'<path d="M24 {y + row_h - 6}H{W - 24}" stroke="{LINE}"/>'
+        body += text(MONO, label, 15, 24, y + 37, color, spacing=1.2)
+        for i, (slug, name, repo) in enumerate(items):
+            d = re.search(r'd="([^"]+)"', (icon_dir / f"{slug}.svg").read_text(encoding="utf-8")).group(1)
+            x = 170 + i * 163
+            study = repo == "estudando"
+            body += (f'<g class="ico" style="animation-delay:{delay:.2f}s"><g transform="translate({x} {y + 18}) scale(1.08)">'
+                     f'<path fill="{AMBER if study else TEXT}" d="{d}"/></g></g>')
+            body += text(MONO, name, 15, x + 33, y + 32, TEXT)
+            body += text(MONO, repo.upper() if study else repo, 12, x + 33, y + 50, AMBER if study else GREEN, spacing=.3)
+            delay += 0.28
+        y += row_h
+    css = """
+.ico{animation:ico 5.600s linear infinite}
+@keyframes ico{0%,8%{opacity:1}0%{opacity:.45}14%,100%{opacity:.72}}
+"""
+    title = "Stack e repositórios: " + "; ".join(f"{n} ({r})" for _, _, items in rows for _, n, r in items) + "."
+    save("stack.svg", svg(W, H, title, grid_pattern(), css, body))
 
 
 # ---------------------------------------------------------------- botões
@@ -457,8 +388,7 @@ if __name__ == "__main__":
     hero()
     ficha()
     greenleaf()
-    decisoes()
-    ferramentas(icons)
+    stack(icons)
     button("btn-linkedin.svg", "LINKEDIN", RED, "LinkedIn")
     button("btn-email.svg", "E-MAIL", RED, "E-mail")
     button("btn-lp.svg", "LANDING PAGE", GREEN, "Landing page do GreenLeaf")
